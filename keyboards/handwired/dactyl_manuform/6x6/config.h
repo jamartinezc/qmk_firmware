@@ -37,13 +37,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // WS2812 RGB LED strip input and number of LEDs
 #define RGB_DI_PIN D1
-#define RGBLED_NUM 76
-//#define DRIVER_LED_TOTAL 76
+//#define RGBLED_NUM 76
 #define RGBLIGHT_SPLIT
-#define RGBLED_SPLIT {38,38}
-#define RGBLIGHT_LED_MAP {37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 6, 4, 3, 2, 1, 0, 38 , 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75}
+//#define RGBLED_SPLIT {38,38}
+//#define RGBLIGHT_LED_MAP {37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 6, 4, 3, 2, 1, 0, 38 , 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75}
 
 //#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_STATIC_LIGHT
-#define RGBLIGHT_DRIVER WS2812
-#define RGBLIGHT_ANIMATIONS
+//#define RGBLIGHT_DRIVER WS2812
+//#define RGBLIGHT_ANIMATIONS
 
+#define RGB_MATRIX_KEYPRESSES // reacts to keypresses
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE // Sets the default mode, if none has been set
+#define DRIVER_LED_TOTAL 76
+#define RGB_MATRIX_SPLIT {38,38}     // (Optional) For split keyboards, the number of LEDs connected on each half. X = left, Y = Right.
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS // enable framebuffer effects
+#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 600
+
+#define DISABLE_RGB_MATRIX_BAND_SAT
+#define DISABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
+#define DISABLE_RGB_MATRIX_BAND_SPIRAL_SAT
+
+#define TAPPING_TERM 200
